@@ -2,6 +2,7 @@ import csv
 import operator
 from Package import Package
 from ChainHash import ChainHash
+import os
 
 all_package_values = ChainHash()
 distance_dict = dict()
@@ -31,7 +32,7 @@ def address_lookup(origin, dest):
 #Method to read distance table and set distance dictionary
 #Time complexity: O(N^2)
 def read_distance_table():
-    with open('../C950/input/DistanceData.csv', newline = '', encoding = 'utf-8-sig') as csvdistance:
+    with open(os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))+'/input/DistanceData.csv', newline = '', encoding = 'utf-8-sig') as csvdistance:
         distance_data = csv.DictReader(csvdistance)
 
 
@@ -41,7 +42,7 @@ def read_distance_table():
 #Method to read package table and set package hash table
 #Time complexity: O(N)
 def read_package_table():
-    with open('../C950/input/PackageData.csv', newline ='', encoding="utf-8-sig") as csvpackage:
+    with open(os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))+'/input/PackageData.csv', newline ='', encoding="utf-8-sig") as csvpackage:
 
         package_data = csv.reader(csvpackage, delimiter=',')
 
