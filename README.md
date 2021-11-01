@@ -1,4 +1,4 @@
-# **ASSUMPTIONS**
+# **INSTRUCTIONS**
 
 * Run *Main.py* within the *src* folder.
 * You will have a menu to navigate through the program.
